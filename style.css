@@ -18,8 +18,41 @@ nav {
     border-radius: 2rem;
     margin: 0 auto 1rem; /* top left&right bottom */
     max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+
+h2 {
+    padding: 1rem;
+    background-color: gold;
+    border-radius: 2rem 2rem 0 0; /* top-left top-right bottom-right bottom-left */
 }
 
 ul {
     list-style-position: inside;
+    list-style-type: none;
+}
+
+li {
+    border-top: 1px solid #333;
+}
+
+/* select only the anchors that are inside the list, whether or not the links have been visited */
+li a, 
+li a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+li a:hover,
+li a:focus {
+    display: block; /* This expands the background applied when hovering over the links */
+    /* The anchor tag is an inline-level element. We use the above line to turn it into a block-level element */
+    background: #333;
+    color: whitesmoke;
+}
+
+/* I must round the bottom corners for the background applied when hovering over the last anchor tag (About) */
+li:last-child a:hover {
+    border-radius: 0 0 2rem 2rem;
 }
